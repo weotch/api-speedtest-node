@@ -12,4 +12,4 @@ Connecting to MAMP right now via socket.  Lets switch to homewbrew db and non-so
 
 ## Usage
 
-Run locally with MYSQL_USER=root MYSQL_PASS=root supervisor -n exit app.js
+Run locally with `MYSQL_USER=root MYSQL_PASS=root supervisor -n exit app.js`
