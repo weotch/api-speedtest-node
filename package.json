@@ -1,0 +1,11 @@
+{
+	"name": "Node-API-test",
+	"version" : "0.0.1",
+	"dependencies" : {
+		"express" : "*",
+		"mysql" : ">=2.0.0-alpha3"
+	},
+	"engine": {
+    "node": "0.8.4"
+  }
+}
