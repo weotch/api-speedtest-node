@@ -6,3 +6,10 @@ Maybe I code it first w/o and then see if there are performance gains in switchi
 
 TODO
 If I stick with the existing library, I need to reconnect the DB if the connection disconnects.  Because each request doesn't auto-connect to the DB.
+
+TODO
+Connecting to MAMP right now via socket.  Lets switch to homewbrew db and non-socket.
+
+## Usage
+
+Run locally with MYSQL_USER=root MYSQL_PASS=root supervisor -n exit app.js
