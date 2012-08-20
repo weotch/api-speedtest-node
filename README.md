@@ -10,6 +10,14 @@ If I stick with the existing library, I need to reconnect the DB if the connecti
 TODO
 Connecting to MAMP right now via socket.  Lets switch to homewbrew db and non-socket.
 
+TOOD
+Make one of the DB options not reuse the mysql connection but create a new connection for every request.
+
+TODO
+Investigate about Monogo:
+* Does it allow parallel requests over a single connection?
+* How secure are it's writes?  What are the risks of losing data?
+
 ## Usage
 
 Run locally with `MYSQL_USER=root MYSQL_PASS=root supervisor -n exit app.js`
