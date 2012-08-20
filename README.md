@@ -13,11 +13,19 @@ Connecting to MAMP right now via socket.  Lets switch to homewbrew db and non-so
 TOOD
 Make one of the DB options not reuse the mysql connection but create a new connection for every request.
 
-TODO
-Investigate about Monogo:
-* Does it allow parallel requests over a single connection?
-* How secure are it's writes?  What are the risks of losing data?
-
 ## Usage
 
 Run locally with `MYSQL_USER=root MYSQL_PASS=root supervisor -n exit app.js`
+
+## Mongo Research
+
+* Does it allow parallel requests over a single connection?
+** No it doesn't, it requires connection pooling too.
+** Mongoose doesn't do connection pooling.
+** Default driver does: http://mongodb.github.com/node-mongodb-native/api-generated/server.html
+*** From the docs about hte default: "However, it can be used on its own, but it also serves as the basis of several object mapping libraries, such as Mongoose."
+*** This forum says it's possible: "https://groups.google.com/forum/?fromgroups#!topic/mongoose-orm/NHqZOjMg-Ng%5B1-25%5D"
+
+* How secure are it's writes?  What are the risks of losing data?
+** If you do a safe mode connection, each write is checked and error thrown if there was a problem.
+** It suppports journaling now, which I guess is some sort of backing up of stuff
